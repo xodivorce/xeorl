@@ -1,9 +1,4 @@
-/* header.css */
-
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #F2F2F2;
@@ -13,43 +8,68 @@ header {
     z-index: 1000; 
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
 .logo {
     display: flex;
     align-items: center;
     font-weight: 500;
     font-size: 18px;
+    color: #171C24;
+    margin-left: 0;
 }
 
 .logo-img {
     width: 35px;
-    margin-right: 10px; /* Spacing between logo and text */
+    margin-right: 2.5px;
+}
+.version-number {
+    font-size: 10px;
+    font-family: system-ui, -apple-system;
+    font-weight: 550;
+    color: #697483;
+    background-color:#ECF0F5;
+    padding: 1px 4px;
+    border-radius: 3px; 
+    margin-right: 40.5rem;
+    margin-bottom: -3px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 25px;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #697483; /* Default color for inactive links */
+    color: #697483;
     font-size: 14px;
     font-weight: 500;
-    transition: color 0.3s; /* Smooth color transition */
+    transition: color 0.3s;
 }
 
 nav ul li a.active {
-    color: #BEC7D5; /* Color for active link */
+    color: #BEC7D5;
 }
 
 nav ul li a:not(.disabled):hover {
-    color: #272B2F; /* Color on hover for non-disabled links */
+    color: #272B2F;
 }
 
 nav ul li a.disabled {
-    color: #BEC7D5; /* Color for disabled link */
-    pointer-events: none; /* Disable click events */
-    cursor: default; /* Change cursor to default */
+    color: #BEC7D5;
+    pointer-events: none;
+    cursor: default;
 }

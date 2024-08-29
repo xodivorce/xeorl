@@ -10,10 +10,13 @@ main {
     padding: 60px 20px;
     text-align: center;
 }
+.shorten-section{
+    margin-bottom: 5em;
+}
 
 .shorten-section h1 {
     color: #171C24;
-    margin-top: 65px;
+    margin-top: 5.3ex;
     font-size: 45px;
     font-weight: 700;
     margin-bottom: 0px;

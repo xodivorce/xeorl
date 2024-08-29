@@ -3,7 +3,6 @@
 session_start();
 
 // Include necessary files
-include "header.php";
 include "php/config.php";
 
 // Set a cookie to track user visits or preferences
@@ -57,13 +56,18 @@ if (isset($_GET)) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Xeorl - Link Shortener and Management Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xeorl - Shorten your links</title>
+    <meta name="description" content="Xeorl is an All-in-One, Fully Free to Use advanced Link Shortener and Management Tool | Equipped with multi-layered URL encryption, URL metadata remover, Mass shrinker, Quick link and many more! | Powered by xeorgs...">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/home.css">
 </head>
+<?php
+include "header.php";
+?>
 <body>
     <main>
         <section class="shorten-section">
