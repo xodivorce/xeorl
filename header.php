@@ -6,7 +6,7 @@
         <span>Xeorl</span>
     </div>
     <div class="version-number">
-            <span>1.2.0</span>
+            <span>1.2.1</span>
         </div>
     <nav>
         <ul>
@@ -18,4 +18,4 @@
     </nav>
 </div>
 </header>
-<script src="assets/js/header.js"></script>
+<script src="assets/js/developer_tools.js"></script>
