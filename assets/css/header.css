@@ -1,0 +1,55 @@
+/* header.css */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #F2F2F2;
+    position: fixed;
+    top: 0; 
+    width: 97%; 
+    z-index: 1000; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.logo-img {
+    width: 35px;
+    margin-right: 10px; /* Spacing between logo and text */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #697483; /* Default color for inactive links */
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a.active {
+    color: #BEC7D5; /* Color for active link */
+}
+
+nav ul li a:not(.disabled):hover {
+    color: #272B2F; /* Color on hover for non-disabled links */
+}
+
+nav ul li a.disabled {
+    color: #BEC7D5; /* Color for disabled link */
+    pointer-events: none; /* Disable click events */
+    cursor: default; /* Change cursor to default */
+}
