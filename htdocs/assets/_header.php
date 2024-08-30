@@ -6,7 +6,7 @@
         <span>Xeorl</span>
     </div>
     <div class="version-number">
-            <span>2.0.0</span>
+            <span>2.0.1</span>
         </div>
     <nav>
         <ul>
