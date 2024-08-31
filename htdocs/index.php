@@ -113,7 +113,7 @@ include "assets/_header.php";
                         while ($row = mysqli_fetch_assoc($sql2)) {
                             $short_url = $domain . $row['shorten_url'];
                             echo '<li>';
-                            echo '<div class="link-icon"><img src="assets/images/url.png" class="logo-img"></div>';
+                            echo '<div class="link-icon"><img src="assets/images/url.png" class="url-img"></div>';
                             echo '<div class="link-info">';
                             echo '<span class="short-link">' . $short_url . '</span>';
                             echo '<span class="long-link">' . $row['full_url'] . '</span>';

@@ -4,10 +4,14 @@
     <div class="logo">
         <img src="assets/images/url.png" alt="Xeorl Logo" class="logo-img">
         <span>Xeorl</span>
+        <span class="version-number">2.1.2</span>
     </div>
-    <div class="version-number">
-            <span>2.1.2</span>
-        </div>
+    <label class="burger" for="burger">
+      <input type="checkbox" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label> <!-- Hamburger Menu -->
     <nav>
         <ul>
             <li><a href="index.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active disabled' : ''; ?>">Home</a></li>

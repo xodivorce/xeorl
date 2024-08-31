@@ -30,7 +30,6 @@ main {
     margin-bottom: 45px;
 }
 
-
 .shorten-section p {
     color:#3C4B62;
     margin-top: -15px;
@@ -155,7 +154,11 @@ main {
     border-radius: 8px;
     margin-bottom: 15px;
 }
-
+.url-img {
+    width: 35px;
+    margin-left: 0px;
+    margin-right: 2px;
+}
 .link-icon {
     margin-right: -20px;
     
@@ -204,3 +207,401 @@ main {
     height: 100%;
 }
 
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    .shorten-section h1 {
+        font-size: 40px;
+    }
+    
+    .shorten-section h2 {
+        font-size: 40px;
+    }
+    .shorten-section p {
+        font-size: 16px;
+        line-height:  30px;
+    }
+    .shortened-links h2 {
+        font-size: 16px;
+        margin-right: 325px;
+        white-space: nowrap;
+    }
+    .shorten-form input {
+        padding: 14px 35px;
+        width: 290px;
+        font-size: 14px;
+    }
+
+    .shorten-form button {
+        padding: 14px 35px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    #links-list {
+        max-width: 500px;
+        font-size: 14px;
+    }
+
+    .url-img {
+        width: 30px;
+    }
+    .link-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 300px;
+    }
+    
+    .short-link {
+        font-size: 14px;
+    }
+    
+    .long-link {
+        font-size: 14px;
+    }
+    
+    .copy-btn,
+    .delete-btn {
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+
+/* For screens 540px and below */
+@media (max-width: 540px) {
+    .shorten-section h1 {
+        font-size: 35px;
+    }
+    
+    .shorten-section h2 {
+        font-size: 35px;
+    }
+    .shorten-section p {
+        font-size: 14px;
+        line-height:  30px;
+    }
+    .shortened-links h2 {
+        font-size: 14px;
+        margin-right: 295px;
+        white-space: nowrap;
+    }
+    .shorten-form input {
+        padding: 14px 35px;
+        width: 290px;
+        font-size: 12px;
+    }
+    
+    .shorten-form button {
+        padding: 14px 35px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    #links-list {
+        max-width: 450px;
+        font-size: 12px;
+    }
+
+    .url-img {
+        width: 25px;
+    }
+    .link-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 280px;
+    }
+    
+    .short-link {
+        font-size: 12px;
+    }
+    
+    .long-link {
+        font-size: 12px;
+    }
+    
+    .copy-btn,
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+    }
+    
+}
+
+
+/* For screens 487px and below */
+@media (max-width: 487px) {
+    #links-list {
+        max-width: 440px;
+        font-size: 12px;
+    }
+
+    .link-info {
+        max-width: 270px;
+    }
+}
+/* For screens 477px and below */
+@media (max-width: 477px) {
+    .shorten-section h1 {
+        font-size: 30px;
+    }
+    
+    .shorten-section h2 {
+        font-size: 30px;
+    }
+    .shorten-section p {
+        font-size: 12px;
+        line-height:  25px;
+    }
+    .shortened-links h2 {
+        font-size: 14px;
+        margin-right: 245px;
+        white-space: nowrap;
+    }
+    .shorten-form input {
+        padding: 14px 35px;
+        width: 290px;
+        font-size: 12px;
+    }
+    
+    .shorten-form button {
+        padding: 14px 35px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    #links-list {
+        max-width: 400px;
+        font-size: 12px;
+    }
+
+    .url-img {
+        width: 25px;
+    }
+    .link-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 240px;
+    }
+    
+    .short-link {
+        font-size: 12px;
+    }
+    
+    .long-link {
+        font-size: 12px;
+    }
+    
+    .copy-btn,
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+    }
+    
+}
+
+/* For screens 442px and below */
+@media (max-width: 442px) {
+    #links-list {
+        max-width: 390px;
+        font-size: 12px;
+    }
+
+    .link-info {
+        max-width: 235px;
+    }
+}
+/* For screens 430px and below */
+@media (max-width: 430px) {
+    #links-list {
+        max-width: 375px;
+        font-size: 12px;
+    }
+    .link-info {
+        max-width: 220px;
+    }  
+}
+/* For screens 415px and below */
+@media (max-width: 415px) {
+    .shorten-section h1 {
+        font-size: 25px;
+    }
+    
+    .shorten-section h2 {
+        font-size: 25px;
+    }
+    .shorten-section p {
+        font-size: 10px;
+        line-height:  20px;
+    }
+    .shortened-links h2 {
+        font-size: 14px;
+        margin-right: 195px;
+        white-space: nowrap;
+    }
+    .shorten-form input {
+        padding: 14px 35px;
+        width: 250px;
+        font-size: 12px;
+    }
+    
+    .shorten-form button {
+        padding: 14px 35px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    #links-list {
+        max-width: 350px;
+        font-size: 10px;
+    }
+
+    .url-img {
+        width: 20px;
+    }
+    .link-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 200px;
+    }
+    
+    .short-link {
+        font-size: 12px;
+    }
+    
+    .long-link {
+        font-size: 12px;
+    }
+    
+    .copy-btn,
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+    }
+    
+}
+
+/* For screens 390px and below */
+@media (max-width: 390px) {
+    .shorten-section h1 {
+        font-size: 25px;
+    }
+    
+    .shorten-section h2 {
+        font-size: 25px;
+    }
+    .shorten-section p {
+        font-size: 10px;
+        line-height:  20px;
+    }
+    .shortened-links h2 {
+        font-size: 14px;
+        margin-right: 175px;
+        white-space: nowrap;
+    }
+    .shorten-form input {
+        padding: 14px 25px;
+        width: 200px;
+        font-size: 12px;
+    }
+    
+    .shorten-form button {
+        padding: 14px 25px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    #links-list {
+        max-width: 330px;
+        font-size: 10px;
+    }
+
+    .url-img {
+        width: 20px;
+    }
+    .link-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 180px;
+    }
+    
+    .short-link {
+        font-size: 12px;
+    }
+    
+    .long-link {
+        font-size: 12px;
+    }
+    
+    .copy-btn,
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+    }
+    
+}
+/* For screens 371px and below */
+@media (max-width: 371px) {
+    .shorten-section h1 {
+        font-size: 25px;
+    }
+    
+    .shorten-section h2 {
+        font-size: 25px;
+    }
+    .shorten-section p {
+        font-size: 10px;
+        line-height:  20px;
+    }
+    .shortened-links h2 {
+        font-size: 14px;
+        margin-right: 165px;
+        white-space: nowrap;
+    }
+    .shorten-form input {
+        padding: 14px 25px;
+        width: 200px;
+        font-size: 12px;
+    }
+    
+    .shorten-form button {
+        padding: 14px 25px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    #links-list {
+        max-width: 320px;
+        font-size: 10px;
+    }
+
+    .url-img {
+        width: 20px;
+    }
+    .link-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 160px;
+    }
+    
+    .short-link {
+        font-size: 12px;
+    }
+    
+    .long-link {
+        font-size: 12px;
+    }
+    
+    .copy-btn,
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+    }
+    
+}
