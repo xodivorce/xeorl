@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="assets/css/_header.css">
 <header>
 <div class="header-container">
     <div class="logo">
         <img src="assets/images/url.png" alt="Xeorl Logo" class="logo-img">
         <span>Xeorl</span>
-        <span class="version-number">2.1.2</span>
+        <span class="version-number">3.0.1</span>
     </div>
     <label class="burger" for="burger">
       <input type="checkbox" id="burger">
