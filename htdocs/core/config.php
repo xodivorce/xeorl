@@ -1,7 +1,9 @@
 <?php
-// Load environment variables
+// Load Composer's autoloader
 require_once __DIR__ . '/vendor/autoload.php'; // Correct path for vendor directory in core
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+
+// Initialize dotenv and load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../'); // Adjusted to point to htdocs/.env
 $dotenv->load();
 
 // Database configuration

@@ -1,5 +1,4 @@
 <?php
-
 // Enable error reporting
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -7,15 +6,12 @@ error_reporting(E_ALL);
 
 // Include the configuration file
 include "core/config.php";
+
 // Start session management
 session_start();
 
-// Include Composer's autoloader
-require_once __DIR__ . '/core/vendor/autoload.php';
-
-
 // Initialize dotenv and load environment variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Retrieve environment variables
@@ -129,7 +125,7 @@ include "assets/_header.php";
         </section>
     </main>
     <?php include 'assets/_footer.php'; ?>
-    <script src="assets/js/home.js"></script>
+    <script src="assets/js/_home.js"></script>
     <script src="assets/js/developer_tools.js"></script>
 </body>
 </html>
