@@ -29,6 +29,8 @@ if ($result_total_clicks) {
 }
 
 // Calculate active users (assuming there's a 'user_sessions' table or similar)
+
+/*
 $sql_active_users = "SELECT COUNT(DISTINCT user_id) as active_users FROM user_sessions WHERE last_active > DATE_SUB(NOW(), INTERVAL 30 DAY)";
 $result_active_users = mysqli_query($conn, $sql_active_users);
 if ($result_active_users) {
@@ -37,5 +39,6 @@ if ($result_active_users) {
 } else {
     //echo "Error fetching active users: " . mysqli_error($conn);
 }
+*/
 
 ?>

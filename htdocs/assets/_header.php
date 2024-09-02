@@ -4,7 +4,7 @@
     <div class="logo">
         <img src="assets/images/url.png" alt="Xeorl Logo" class="logo-img">
         <span>Xeorl</span>
-        <span class="version-number">3.1.1</span>
+        <span class="version-number">3.1.2</span>
     </div>
     <label class="burger" for="burger">
       <input type="checkbox" id="burger">
