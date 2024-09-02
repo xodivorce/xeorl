@@ -110,7 +110,7 @@ main {
 .shortened-links h2 {
     font-size: 18px;
     margin-right: 500px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: 550;
     color: #A2ABB8;
 }
@@ -205,6 +205,123 @@ main {
 .delete-btn img {
     width: 100%;
     height: 100%;
+}
+
+
+.dashboard-stats {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+   
+}
+
+.stat-item {
+    background: #ffffff;
+    padding: 25px; /* Reduce padding for a more compact look */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
+    width: 250px; /* Reduce width */
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 4em;
+}
+
+.stat-item:hover,
+.stat-item:focus {
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Adjust shadow strength */
+}
+
+.stat-icon {
+    width: 35px; 
+    height: 35px;
+    margin-bottom: 15px; 
+}
+
+.stat-item h3 {
+    font-size: 16px; 
+    color: #677583;
+    margin-bottom: 10px; 
+    font-weight: 600;
+}
+
+.stat-item p {
+    font-size: 28px; 
+    font-weight: 700;
+    color: #171C24;
+    margin: 0;
+}
+.stat-item img.links-icon {
+    width: 35px; 
+    height: auto; 
+}
+.stat-item img.total-icon {
+    width: 30px; 
+    height: auto;
+}.stat-item img.users-icon {
+    width: 30px; 
+    height: auto; 
+}
+
+.links-icon{
+    .user-icon {
+        width: 20px; 
+        height: 20px; 
+    }
+    
+}
+.dashboard-stats-section{
+    margin-top: 6em;
+}
+.section-heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: #171C24;
+    margin-bottom: -20px;
+    text-align: center; 
+    margin-top: 0ex;
+}
+
+.section-subheading {
+    font-size: 30px;
+    margin-right: 00px;
+    margin-bottom: 2px; 
+    font-weight: 700;
+    color: #677583;
+    text-align: center; 
+}
+.section-paragraph{
+    color:#3C4B62;
+    font-size: 18px;
+    line-height:  30px;  
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+.contact-link {
+    color: #387FFF;
+    text-decoration: none; 
+    font-weight: 00;
+    position: relative; 
+}
+
+.contact-link::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #387FFF; 
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    right: 0;
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+
+.contact-link:hover::after {
+    transform: scaleX(1); 
 }
 
 

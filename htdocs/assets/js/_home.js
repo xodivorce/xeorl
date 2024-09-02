@@ -10,7 +10,7 @@ shortenBtn.onclick = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             let data = xhr.response;
             if (data.length <= 5) {
-                let domain = "localhost/url/";
+                let domain = "xeorl.buzz/";
                 let shortenURL = domain + data;
 
                 let newRow = `
@@ -45,25 +45,41 @@ document.addEventListener('click', function(e) {
             console.error('Failed to copy text: ', err);
         });
     }
+});
 
-    // Handle delete button clicks
+// Handle delete button clicks
+ /* 
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.delete-btn')) {
+        const linkItem = e.target.closest("li");
+        const shortenURL = linkItem.querySelector(".short-link").textContent;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `core/delete.php?id=${shortenURL.split('/').pop()}`, true);
+        xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                if (xhr.responseText === "success") {
+                    linkItem.remove();
+
+                    // Check if the list is empty after deletion
+                    if (linksList.children.length === 0) {
+                        location.reload(); // Reload the page if no links are left
+                    }
+                } else {
+                    alert("Failed to delete the URL.");
+                }
+            }
+        };
+        xhr.send();
+    }
+    
+});*/ 
+
+      // Handle members only delete button clicks!!
     document.querySelectorAll(".delete-btn").forEach((deleteBtn) => {
         deleteBtn.addEventListener("click", function () {
-            const linkItem = this.closest("li");
-            const shortenURL = linkItem.querySelector(".short-link").textContent;
-    
-            let xhr = new XMLHttpRequest();
-            xhr.open("GET", `core/delete.php?id=${shortenURL.split('/').pop()}`, true);
-            xhr.onload = () => {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    if (xhr.responseText === "success") {
-                        linkItem.remove();
-                    } else {
-                        alert("Failed to delete the URL.");
-                    }
-                }
-            };
-            xhr.send();
+            // Alert instead of delete functionality
+            alert("This feature is available for members only.");
         });
-    });
-});
+    });  
+
