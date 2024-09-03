@@ -2,7 +2,7 @@
 
 ### Xeorl - The All-In-One, Fully Free to Use Advanced Link Shortener and Management Tool - Powered by [@xodivorce](https://instagram.com/xodivorce) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
-[![version](https://img.shields.io/badge/version-v3.1.3-yellow.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
+[![version](https://img.shields.io/badge/version-v3.1.4-yellow.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
 <br></br>
 
@@ -23,7 +23,7 @@ Want to jump in and sprinkle some magic on this project? Follow these steps:
 1. **Fork and Clone**:
    - Hit “Fork” at the top-right of the page to make your copy. Then clone it to your local machine:
      ```bash
-     git clone git@github.com:xeorl/xeorl.git
+     git clone git@github.com:xodivorce/xeorl.git
      ```
 
 2. **Set Up Your Local Playground**:
