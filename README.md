@@ -2,7 +2,7 @@
 
 ### Xeorl - The All-In-One, Fully Free to Use Advanced Link Shortener and Management Tool - Powered by [@xodivorce](https://instagram.com/xodivorce) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
-[![version](https://img.shields.io/badge/version-v3.1.4-yellow.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
+[![version](https://img.shields.io/badge/version-v3.2.0-yellow.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xeorl/xeorl-portfolio/)
 <br></br>
 

@@ -3,6 +3,31 @@ const form = document.querySelector(".shorten-form"),
     shortenBtn = document.querySelector("#shorten-btn"),
     linksList = document.querySelector("#links-list");
 
+// Clear the list and show the "You don't have any shortened links" message
+function resetLinksList() {
+    linksList.innerHTML = `
+        <li id="default-message">
+            <div class="link-icon"><img src="assets/images/url.png" class="url-img"></div>
+            <div class="link-info">
+                <span class="short-link">xeorl.buzz/*****</span>
+                <span class="long-link">You don't have any shortened links</span>
+            </div>
+            <button class="copy-btn"><img src="assets/images/copy.png"></button>
+            <button class="delete-btn"><img src="assets/images/delete.png"></button>
+        </li>
+    `;
+}
+
+// Check session storage for existing links on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLinks = sessionStorage.getItem("shortenedLinks");
+    if (savedLinks) {
+        linksList.innerHTML = savedLinks;
+    } else {
+        resetLinksList();
+    }
+});
+
 shortenBtn.onclick = () => {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "core/url-controll.php", true);
@@ -13,6 +38,13 @@ shortenBtn.onclick = () => {
                 let domain = "xeorl.buzz/";
                 let shortenURL = domain + data;
 
+                // Remove the default message if it exists
+                const defaultMessage = document.getElementById("default-message");
+                if (defaultMessage) {
+                    defaultMessage.remove();
+                }
+
+                // Add the new link to the list
                 let newRow = `
                     <li>
                         <div class="link-icon"><img src="assets/images/url.png" class="logo-img"></div>
@@ -24,9 +56,13 @@ shortenBtn.onclick = () => {
                         <button class="delete-btn"><img src="assets/images/delete.png"></button>
                     </li>
                 `;
+
+                // Append the new link to the list and update session storage
                 linksList.insertAdjacentHTML('afterbegin', newRow);
-                urlInput.value = ""; // Clear the input field
-                location.reload(); // Reload the page after shortening
+                sessionStorage.setItem("shortenedLinks", linksList.innerHTML);
+
+                // Clear the input field
+                urlInput.value = ""; 
             } else {
                 alert(data);
             }
@@ -46,6 +82,14 @@ document.addEventListener('click', function(e) {
         });
     }
 });
+
+// Handle members only delete button clicks!!
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.delete-btn')) {
+        alert("This feature is available for members only.");
+    }
+});
+
 
 // Handle delete button clicks
  /* 
@@ -74,12 +118,3 @@ document.addEventListener('click', function(e) {
     }
     
 });*/ 
-
-      // Handle members only delete button clicks!!
-    document.querySelectorAll(".delete-btn").forEach((deleteBtn) => {
-        deleteBtn.addEventListener("click", function () {
-            // Alert instead of delete functionality
-            alert("This feature is available for members only.");
-        });
-    });  
-
