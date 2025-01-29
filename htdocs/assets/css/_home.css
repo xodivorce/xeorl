@@ -59,6 +59,9 @@ main {
     outline: none;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
+    user-select: text;  /* Allow text selection and enable pasting */
+    -webkit-user-select: text; /* For Safari */
+    -moz-user-select: text;  /* For Firefox */
 }
 
 .shorten-form input::placeholder {
@@ -219,19 +222,10 @@ main {
     background: #ffffff;
     padding: 25px; /* Reduce padding for a more compact look */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
-    width: 250px; /* Reduce width */
+    width: 180px; /* Reduce width */
     text-align: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
     margin-top: 10px;
     margin-bottom: 4em;
-}
-
-.stat-item:hover,
-.stat-item:focus {
-    transform: translateY(-3px); /* Slight lift */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Adjust shadow strength */
 }
 
 .stat-icon {
@@ -292,13 +286,19 @@ main {
     color: #677583;
     text-align: center; 
 }
-.section-paragraph{
-    color:#3C4B62;
+
+.section-paragraph {
+    max-width: 620px;
+    margin: 1em auto;
     font-size: 18px;
-    line-height:  30px;  
-    margin-top: 25px;
-    margin-bottom: 45px;
+    line-height: 1.8;
+    color: #3C4B62;
+    text-align: center;
+    padding: 0 15px;
+    word-wrap: break-word;  /* Ensures text breaks within the container */
+    white-space: normal;  /* Allows normal text wrapping */
 }
+
 
 .contact-link {
     color: #387FFF;
@@ -324,6 +324,30 @@ main {
     transform: scaleX(1); 
 }
 
+.how-to-start-section .section-paragraph{
+    margin-bottom: 2em;
+    
+}
+.how-to-start-section .steps-list {
+    text-align: left; /* Align steps to the left for a clean flow */
+    margin: 0 auto;
+    max-width: 600px; /* Constrain the steps' width */
+    margin-bottom: 2em;
+}
+
+.how-to-start-section .steps-list h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin: 0.5rem 0; /* Adjust vertical spacing */
+    color: #171C24;
+}
+
+.how-to-start-section .steps-list p {
+    font-size: 18px;
+    color: #3C4B62;
+    margin: 0.5rem 0 1rem; /* Adjust spacing between text blocks */
+    padding-left: 1.5rem; /* Add indentation to the descriptions */
+}
 
 /* For screens 768px and below */
 @media (max-width: 768px) {

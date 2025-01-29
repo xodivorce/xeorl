@@ -1,11 +1,14 @@
 header {
     padding: 20px;
     background-color: #ffffff;
-    border-bottom: 1px solid #F2F2F2;
     position: fixed;
     top: 0; 
     width: 97%; 
     z-index: 1000; 
+}
+
+.header.scrolled {
+    border-bottom: 1px solid #F2F2F2;
 }
 
 .header-container {

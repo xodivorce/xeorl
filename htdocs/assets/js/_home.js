@@ -1,3 +1,14 @@
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header'); // Get the header element
+  
+    // Check if the page has been scrolled
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled'); // Add the "scrolled" class
+    } else {
+        header.classList.remove('scrolled'); // Remove the "scrolled" class
+    }
+});
+
 const form = document.querySelector(".shorten-form"),
     urlInput = document.querySelector("#url-input"),
     shortenBtn = document.querySelector("#shorten-btn"),
@@ -118,3 +129,5 @@ document.addEventListener('click', function(e) {
     }
     
 });*/ 
+
+
