@@ -3,13 +3,18 @@ session_start();
 // Load Composer's autoloader
 require_once __DIR__ . '/vendor/autoload.php'; // Correct path for vendor directory in core
 require_once 'config.php';
+
+// Initialize dotenv and load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../'); // Adjusted to point to htdocs/.env
+$dotenv->load();
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Google OAuth Configuration
-$clientID = '1087400250877-qmns5ehmke31cd19p2cfm8111oovlnf8.apps.googleusercontent.com';
-$clientSecret = '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';
-$redirectUri = 'http://localhost/Php-Projects/xeorl/htdocs/core/redirect_google.php';
+// Database configuration
+$clientID = $_ENV['CLIENT_ID'];
+$clientSecret = $_ENV['CLIENT_SECRET'];
+$redirectUri = $_ENV['REDIRECT_URI'];
 
 $client = new Google_Client();
 $client->setClientId($clientID);
