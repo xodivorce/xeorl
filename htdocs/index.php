@@ -37,34 +37,6 @@ require 'core/get_statistics.php';  // Include the statistics file
             <div class="shortened-links">
                 <h2>Your shortened links :</h2>
                 <ul id="links-list">
-                    <?php
-                    $sql2 = mysqli_query($conn, "SELECT * FROM url ORDER BY id DESC");
-                    if (mysqli_num_rows($sql2) > 0) {
-                        while ($row = mysqli_fetch_assoc($sql2)) {
-                            $short_url = $domain . $row['shorten_url'];
-                            echo '<li>';
-                            echo '<div class="link-icon"><img src="assets/images/url.png" class="url-img"></div>';
-                            echo '<div class="link-info">';
-                            echo '<span class="short-link">' . $short_url . '</span>';
-                            echo '<span class="long-link">' . $row['full_url'] . '</span>';
-                            echo '</div>';
-                            echo '<button class="copy-btn"><img src="assets/images/copy.png"></button>';
-                            echo '<button class="delete-btn"><img src="assets/images/delete.png"></button>';
-                            echo '</li>';
-                        }
-                    } else {
-                        // No shortened links found
-                        echo '<li>';
-                        echo '<div class="link-icon"><img src="assets/images/url.png" class="url-img"></div>';
-                        echo '<div class="link-info">';
-                        echo '<span class="short-link">xeorl.buzz/*****</span>';
-                        echo '<span class="long-link">You don\'t have any shortened links</span>';
-                        echo '</div>';
-                        echo '<button class="copy-btn"><img src="assets/images/copy.png"></button>';
-                        echo '<button class="delete-btn"><img src="assets/images/delete.png"></button>';
-                        echo '</li>';
-                    }
-                    ?>
                 </ul>
             </div>
         </section>

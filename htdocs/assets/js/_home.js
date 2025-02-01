@@ -46,7 +46,8 @@ shortenBtn.onclick = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             let data = xhr.response;
             if (data.length <= 5) {
-                let domain = "xeorl.buzz/";
+                //This is your domain name 
+                const domain = "xeorl.buzz/";
                 let shortenURL = domain + data;
 
                 // Remove the default message if it exists
@@ -100,7 +101,6 @@ document.addEventListener('click', function(e) {
         alert("This feature is available for members only.");
     }
 });
-
 
 // Handle delete button clicks
  /* 

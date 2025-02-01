@@ -32,8 +32,8 @@ if (isset($_POST['login_btn'])) {
             $_SESSION['user_email'] = $row['user_email'];
             $_SESSION['user_type'] = $row['user_type'];
 
-            // Redirect to dashboard after successful login
-            header('Location: ../dashboard.php');
+            // Redirect to monetization after successful login
+            header('Location: ../monetization.php');
             exit();
         } else {
             $_SESSION['error'] = "Invalid password. Please try again.";

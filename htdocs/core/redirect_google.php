@@ -60,8 +60,8 @@ if (isset($_GET['code'])) {
     $_SESSION['user_name'] = $name;
     $_SESSION['user_email'] = $email;
 
-    // Redirect to dashboard
-    header("Location: ../dashboard.php");
+    // Redirect to monetization
+    header("Location: ../monetization.php");
     exit();
 } else {
     header("Location: " . $client->createAuthUrl());
