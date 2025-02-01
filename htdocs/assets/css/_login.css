@@ -419,7 +419,6 @@ body {
     }
     .input-field {
         padding: 12px;
-        border: 0.5px solid var(--container-bg);
         border-radius: 5px;
         width: 48%;
     }
@@ -440,8 +439,7 @@ body {
         display: inline-block;
         width: 12px;
         height: 12px;
-        background-color: #171C24;
-        border: 1px solid var(--right-bg);
+
         border-radius: 3px;
         margin-right: 8px;
     }
@@ -458,7 +456,6 @@ body {
         display: inline-flex;
         align-items: center;
         font-size: 11px;
-        color: var(--text-white);
         cursor: pointer;
     }
     .forgot-password-link {
@@ -479,7 +476,6 @@ body {
         font-size: var(--font-size-medium);
         margin: 10px 0;
         margin-top: 10px;
-        color: var(--input-color);
         position: relative;
     }
 
@@ -495,6 +491,7 @@ body {
     }
 }
 @media (max-width: 838px) {
+    
     .header {
         display: none; /* Hide the header with logo and back button */
     }
@@ -518,12 +515,20 @@ body {
     }
 }
 @media (max-width: 450px) {
-    .container {
-        width: 90%; /* Keep responsive */
-        max-width: 300px; /* Reduce maximum width */
-        margin: auto; /* Center the container */
-        height: auto; /* Allow height to adjust based on content */
+
+body {
+    font-family: var(--main-font);
+    background-color: #444445;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+    .left-section{
+        display: none;
     }
+    
     .eye-icon {
         width: 20px;
         height: 20px;
@@ -538,7 +543,10 @@ body {
         padding: 10px; /* Reduce input padding */
         margin-top: -2px; /* Space between input fields */
     }
-   
+    .error-message {
+        margin-top: -25px !important;
+        margin-bottom: 10px !important;
+    }
 
     .checkbox-forgot-container {
         display: flex; /* Keep them in one line */
@@ -562,7 +570,6 @@ body {
         font-size: var(--font-size-medium);
         margin: 8px 0;
         margin-top: 10px;
-        color: var(--input-color);
         position: relative;
     }
     .divider::before,

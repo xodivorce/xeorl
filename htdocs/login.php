@@ -49,7 +49,7 @@ session_start();
                     <!-- Displaying error messages -->
                     <?php
                     if (isset($_SESSION['error'])) {
-                        echo "<div style='color: red; font-size: 14px; margin-top: -20px; margin-bottom: 3px;'>" . $_SESSION['error'] . "</div>";
+                        echo "<div style='color: red; font-size: 14px; margin-top: -20px; margin-bottom: 3px;' class='error-message'>" . $_SESSION['error'] . "</div>";
                         unset($_SESSION['error']);
                     }
                     ?>
