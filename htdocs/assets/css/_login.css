@@ -341,7 +341,7 @@ body {
     justify-content: space-between;
 }
 
-.google-btn, .apple-btn {
+.google-btn {
     width: 48%;
     padding: 12px;
     font-family: var(--button-font);
@@ -355,7 +355,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
-.google-btn:hover, .apple-btn:hover {
+.google-btn:hover {
     background-color: var(--hover-color);
 }
 
@@ -363,6 +363,20 @@ body {
     margin-right: 10px;
     width: 20px;
     height: 20px;
+}
+.apple-btn{
+    cursor: not-allowed;
+    width: 48%;
+    padding: 12px;
+    font-family: var(--button-font);
+    background-color: var(--left-bg);
+    color: var(--text-white);
+    border: 1px solid var(--button-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 @media (max-width: 990px) {

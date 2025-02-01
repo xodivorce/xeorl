@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 02, 2024 at 10:29 PM
+-- Generation Time: Jan 30, 2025 at 10:27 AM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `xeorl`
+-- Database: `Xeorl`
 --
 
 -- --------------------------------------------------------
@@ -59,7 +59,39 @@ INSERT INTO `url` (`id`, `shorten_url`, `full_url`, `clicks`, `total_links`, `to
 (83, '62809', 'https://xeorl.buzz/', 0, 0, 0),
 (84, '10676', 'https://xeorl.buzz/', 0, 0, 0),
 (85, 'f719f', 'https://xeorl.buzz/', 0, 0, 0),
-(86, 'a3cc2', 'https://xeorl.buzz/', 0, 0, 0);
+(86, 'a3cc2', 'https://xeorl.buzz/', 0, 0, 0),
+(87, '52fe9', 'https://prourl.eu.org/rwqe', 0, 0, 0),
+(88, 'd3b17', 'https://www.xodivorce.in/?i=1', 0, 0, 0),
+(89, '801d2', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
+(90, '8819b', 'http://localhost/Php-Projects/xeorl/htdocs/home.php', 0, 0, 0),
+(91, 'c8ff6', 'http://localhost/Php-Projects/xeorl/htdocs/home.php', 0, 0, 0),
+(92, '25418', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
+(93, 'ec04a', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
+(94, 'c1234', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
+(95, 'c6a56', 'https://www.xodivorce.in/?i=1', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `user_pass` varchar(255) NOT NULL,
+  `user_otp` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `user_name` varchar(255) NOT NULL,
+  `user_type` int(1) NOT NULL DEFAULT 3
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `user_email`, `user_pass`, `user_otp`, `created_at`, `user_name`, `user_type`) VALUES
+(2, 'prasidmandal79@gmail.com', '$2y$10$qPRIk2B7EftJZUPB.y01GONHDhqMvcQKIvUVRRDnHsRUJYT.1zdQy', 835416, '2025-01-29 11:22:48', 'Prasid Mandal', 3);
 
 --
 -- Indexes for dumped tables
@@ -72,6 +104,13 @@ ALTER TABLE `url`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_email` (`user_email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -79,7 +118,13 @@ ALTER TABLE `url`
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

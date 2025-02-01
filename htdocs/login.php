@@ -6,6 +6,12 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Xeorl">
+    <link rel="manifest" href="./assets/images/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -39,14 +45,13 @@ session_start();
                         <input type="password" placeholder="Enter your password" class="input-field full-width" id="password-field" name="user_pass" required>
                         <img src="assets/images/eye.svg" alt="Show Password" class="eye-icon" id="toggle-password">
                     </div>
-                 <!-- Displaying error messages -->
-                <?php
+                    <!-- Displaying error messages -->
+                    <?php
                     if (isset($_SESSION['error'])) {
                         echo "<div style='color: red; font-size: 14px; margin-top: -20px; margin-bottom: 3px;'>" . $_SESSION['error'] . "</div>";
                         unset($_SESSION['error']);
                     }
-                ?>
-
+                    ?>
 
                     <!-- Remember Me Checkbox, Forgot Password link, and Beta Notice -->
                     <div class="checkbox-forgot-container">
@@ -56,7 +61,6 @@ session_start();
                         </div>
                         <a href="forgot_pass_step_one.php" class="forgot-password-link">Forgot password?</a>
                     </div>
-                    
 
                     <!-- Beta Notice -->
                     <p class="beta-notice">
@@ -69,8 +73,14 @@ session_start();
                 <div class="divider">Or login with</div>
 
                 <div class="social-login">
-                    <button class="google-btn"> <img src="assets/images/google.png" alt="Google Logo"> Google</button>
-                    <button class="apple-btn"> <img src="assets/images/apple.png" alt="Apple Logo"> Apple</button>
+                    <!-- Link to Google login via redirect.php -->
+                    <button class="google-btn" onclick="window.location.href='core/redirect_google.php'">
+                        <img src="assets/images/google.png" alt="Google Logo"> Google
+                    </button>
+
+                    <button class="apple-btn">
+                        <img src="assets/images/apple.png" alt="Apple Logo"> Apple
+                    </button>
                 </div>
             </div>
         </div>
