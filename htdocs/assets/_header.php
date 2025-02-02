@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="logo">
         <img src="assets/images/url.png" alt="Xeorl Logo" class="logo-img">
         <span>Xeorl</span>
-        <span class="version-number">3.2.0</span>
+        <span class="version-number">4.1.4</span>
     </div>
     <label class="burger" for="burger">
       <input type="checkbox" id="burger">

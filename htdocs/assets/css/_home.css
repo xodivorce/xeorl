@@ -31,11 +31,15 @@ main {
 }
 
 .shorten-section p {
-    color:#3C4B62;
+    color: #3C4B62;
     margin-top: -15px;
     margin-bottom: 45px;
+    max-width: 550px;
     font-size: 18px;
-    line-height:  35px;
+    line-height: 35px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .shorten-form {
     display: flex;
@@ -59,9 +63,6 @@ main {
     outline: none;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
-    user-select: text;  /* Allow text selection and enable pasting */
-    -webkit-user-select: text; /* For Safari */
-    -moz-user-select: text;  /* For Firefox */
 }
 
 .shorten-form input::placeholder {
@@ -420,7 +421,7 @@ main {
         font-size: 35px;
     }
     .shorten-section p {
-        font-size: 14px;
+        font-size: 16px;
         line-height:  30px;
     }
     .shortened-links h2 {
@@ -429,13 +430,13 @@ main {
         white-space: nowrap;
     }
     .shorten-form input {
-        padding: 14px 35px;
+        padding: 15px 38px;
         width: 290px;
         font-size: 12px;
     }
     
     .shorten-form button {
-        padding: 14px 35px;
+        padding: 15px 36px;
         font-weight: 600;
         font-size: 12px;
     }
@@ -474,14 +475,66 @@ main {
 
 /* For screens 487px and below */
 @media (max-width: 487px) {
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333333;
+    }
+    
     #links-list {
         max-width: 440px;
         font-size: 12px;
     }
 
+    .shorten-section p {
+        font-size: 18px;
+        line-height:  25px;
+    }
+
     .link-info {
         max-width: 270px;
     }
+    .shorten-form input {
+        padding: 15px 35px;
+        width: 290px;
+        font-size: 12px;
+        border: 1px solid #171C24;
+    }
+
+    .shorten-form input::placeholder {
+        color: #171C24; /* Light gray placeholder text */
+        font-weight: 500;
+    }
+    .shorten-form button {
+        padding: 15px 35px;
+        background-color:  #171C24;
+        border: 1px solid #171C24;
+        font-weight: 600;
+        font-size: 12px;
+        
+    }
+    #links-list li {
+        border: 1px solid #171C24;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .shortened-links h2 {
+        color: #595a5a;
+    }
+
+.section-paragraph {
+    max-width: 300px;
+    margin: 1em auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #3C4B62;
+    text-align: left;
+    padding: 0 15px;  /* Ensures text breaks within the container */
+    white-space: normal;  /* Allows normal text wrapping */
+}
 }
 /* For screens 477px and below */
 @media (max-width: 477px) {
@@ -493,7 +546,7 @@ main {
         font-size: 30px;
     }
     .shorten-section p {
-        font-size: 12px;
+        font-size: 18px;
         line-height:  25px;
     }
     .shortened-links h2 {
@@ -502,15 +555,23 @@ main {
         white-space: nowrap;
     }
     .shorten-form input {
-        padding: 14px 35px;
-        width: 290px;
+        padding: 15px 35px;
+        width: 350px;
         font-size: 12px;
+        border: 1px solid #171C24;
+    }
+
+    .shorten-form input::placeholder {
+        color: #171C24; /* Light gray placeholder text */
+        font-weight: 500;
     }
     
     .shorten-form button {
-        padding: 14px 35px;
+        padding: 15px 35px;
+        background-color:  #171C24;
         font-weight: 600;
         font-size: 12px;
+        
     }
 
     #links-list {
@@ -575,7 +636,7 @@ main {
         font-size: 25px;
     }
     .shorten-section p {
-        font-size: 10px;
+        font-size: 16px;
         line-height:  20px;
     }
     .shortened-links h2 {
@@ -584,13 +645,13 @@ main {
         white-space: nowrap;
     }
     .shorten-form input {
-        padding: 14px 35px;
+        padding: 15px 36px;
         width: 250px;
         font-size: 12px;
     }
     
     .shorten-form button {
-        padding: 14px 35px;
+        padding: 15px 36px;
         font-weight: 600;
         font-size: 12px;
     }
@@ -636,7 +697,7 @@ main {
         font-size: 25px;
     }
     .shorten-section p {
-        font-size: 10px;
+        font-size: 16px;
         line-height:  20px;
     }
     .shortened-links h2 {
@@ -645,13 +706,13 @@ main {
         white-space: nowrap;
     }
     .shorten-form input {
-        padding: 14px 25px;
+        padding: 15px 26px;
         width: 200px;
         font-size: 12px;
     }
     
     .shorten-form button {
-        padding: 14px 25px;
+        padding: 15px 26px;
         font-weight: 600;
         font-size: 12px;
     }
@@ -696,7 +757,7 @@ main {
         font-size: 25px;
     }
     .shorten-section p {
-        font-size: 10px;
+        font-size: 18px;
         line-height:  20px;
     }
     .shortened-links h2 {
@@ -705,13 +766,13 @@ main {
         white-space: nowrap;
     }
     .shorten-form input {
-        padding: 14px 25px;
+        padding: 15px 26px;
         width: 200px;
         font-size: 12px;
     }
     
     .shorten-form button {
-        padding: 14px 25px;
+        padding: 15px 26px;
         font-weight: 600;
         font-size: 12px;
     }
@@ -744,5 +805,26 @@ main {
         width: 18px;
         height: 18px;
     }
+    .section-paragraph {
+        max-width: 400px;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #3C4B62;
+        text-align: left;
+        padding: 0 6px;  /* Ensures text breaks within the container */
+        white-space: normal;  /* Allows normal text wrapping */
+    }
     
+}
+
+@media (max-width: 361px) {
+    .section-paragraph {
+        max-width: 500px;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #3C4B62;
+        text-align: left;
+        padding: 0 6px;  /* Ensures text breaks within the container */
+        white-space: normal;  /* Allows normal text wrapping */
+    }
 }
