@@ -15,7 +15,6 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 // Retrieve environment variables
-$domain = $_ENV['DOMAIN'];
 $host = $_ENV['DB_HOST'];
 $user = $_ENV['DB_USER'];
 $pass = $_ENV['DB_PASS'];
@@ -36,7 +35,7 @@ if (isset($_GET)) {
         $u = mysqli_real_escape_string($conn, $key);
         $new_url = str_replace('/', '', $u);
     }
-    
+
     // Query the database for the full URL associated with the shortened URL
     $sql = mysqli_query($conn, "SELECT full_url FROM url WHERE shorten_url = '{$new_url}'");
     if (mysqli_num_rows($sql) > 0) {
@@ -46,11 +45,13 @@ if (isset($_GET)) {
             // Fetch the full URL and store it in the session
             $full_url = mysqli_fetch_assoc($sql);
             $_SESSION['redirect_url'] = $full_url['full_url'];
-            
-            // Redirect to unzipper.php
-            header("Location: unzipper.php");
-            exit(); // Stop further script execution after redirection
+
+            // Instead of header redirect, include the unzipper.php page here
+            include 'unzipper.php'; // Include the unzipper.php page in this URL
+            exit(); // Exit to ensure the rest of the script doesn't run
         }
+    } else {
+    
     }
 }
 ?>

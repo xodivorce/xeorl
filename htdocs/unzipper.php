@@ -1,13 +1,13 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// Check if redirect_url is set in session
 if (!isset($_SESSION['redirect_url'])) {
     http_response_code(400);
     die("Invalid request! The page you are looking for may have been deleted or removed from our server.");
 }
 
-// Retrieve the redirect URL from session
 $redirect_url = $_SESSION['redirect_url'];
 ?>
 <!DOCTYPE html>
@@ -44,12 +44,10 @@ $redirect_url = $_SESSION['redirect_url'];
 
 <?php include "assets/_footer.php"; ?>
 
-<!-- Inject PHP value into JavaScript -->
 <script>
-    const redirectUrl = "<?php echo $redirect_url; ?>"; // PHP injects the redirect_url
+    const redirectUrl = "<?php echo $redirect_url; ?>";
 </script>
 
-<!-- Link to the external JavaScript file -->
 <script src="assets/js/_unzipper.js"></script>
 
 </body>

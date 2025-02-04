@@ -36,7 +36,7 @@ shortenBtn.onclick = () => {
             let data = xhr.response;
             if (data.length <= 5) {
                 //This is your domain name 
-                const domain = "http://localhost/Php-Projects/xeorl/htdocs/";
+                const domain = "xeorl.buzz/";
                 let shortenURL = domain + data;
 
                 // Remove the default message if it exists
