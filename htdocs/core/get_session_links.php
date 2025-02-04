@@ -1,6 +1,8 @@
 <?php
 session_start();
 include "config.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Check if the session variable for storing shortened links exists
 if (!isset($_SESSION['shortened_links'])) {

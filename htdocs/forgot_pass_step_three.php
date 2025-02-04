@@ -1,6 +1,8 @@
 <?php
 // Start the session to access session variables
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // Get the email from the session
 
 // Display any error or success message if set in session

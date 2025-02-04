@@ -1,0 +1,47 @@
+#cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+#cookieBanner p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+button {
+    padding: 10px 15px;
+    border: 1px solid #002147;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.cookie-settings {
+    background: white;
+    color: #002147;
+}
+
+.reject, .accept {
+    background: #002147;
+    color: white;
+}
+
+.close {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}

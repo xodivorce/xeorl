@@ -1,12 +1,120 @@
+/* General Styles */
 body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    height: 100vh;
     background-color: #ffffff;
-    color: #333333;
+    color: #111313;
 }
 
-main {
-    padding: 60px 20px;
-    text-align: center;
+/* User Image */
+.user-image {
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+    border-radius: 50%;
+    margin-left: 25px;
+    border: 1px solid #ffffff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 20%;
+    background-color: #ffffff;
+    color: #98E5DD;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px rgb(58, 66, 65);
+    padding: 20px;
+}
+
+/* Sidebar Header (Flexbox) */
+.sidebar .sidebar-header {
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping when screen is small */
+    align-items: center; /* Ensures vertical alignment */
+    margin-left: -25px;
+    margin-right: -20px;
+
+    margin-top: 45px;
+}
+
+/* Image & Text Flexbox */
+.sidebar .sidebar-header .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    color: #171c24;
+    
+}
+
+.user-email {
+    color: #677583;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    text-decoration: none;
+    color: #171c24;
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Keep only background-color for transition */
+}
+
+/* Main Content */
+.content {
+    width: 80%;
+    padding: 20px;
+}
+
+.content h2, .content h3 {
+    color: #EEB58F;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .sidebar .sidebar-header {
+        justify-content: flex-start;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sidebar .sidebar-header .user-image {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .user-info {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
 }

@@ -1,6 +1,8 @@
 <?php
 session_start(); // Start the session to access session variables
 require_once 'config.php'; // Ensure this is your mysqli connection file
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Check if the email is stored in the session
 if (!isset($_SESSION['email'])) {

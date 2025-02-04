@@ -1,9 +1,6 @@
-Options -Indexes
 RewriteEngine On
 
-# Check if the request is not for an existing directory or file
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php)
 RewriteCond %{REQUEST_FILENAME} !-f
-
-# Rewrite all other URLs to index.php with the 'url' parameter
-RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]

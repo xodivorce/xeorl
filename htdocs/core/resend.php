@@ -5,6 +5,8 @@ session_start();
 // Include necessary files
 require_once 'config.php';  // Ensure this is your mysqli connection file
 require 'vendor/autoload.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;

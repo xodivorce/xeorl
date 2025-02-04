@@ -232,13 +232,12 @@ main {
 .stat-icon {
     width: 35px; 
     height: 35px;
-    margin-bottom: 15px; 
 }
 
 .stat-item h3 {
     font-size: 16px; 
     color: #677583;
-    margin-bottom: 10px; 
+    margin-bottom: 15px; 
     font-weight: 600;
 }
 

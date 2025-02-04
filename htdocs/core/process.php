@@ -27,28 +27,6 @@ if (!$conn) {
     die("Database connection error: " . mysqli_connect_error());
 }
 
-// Set a cookie to track user visits or preferences
-$cookie_name = "user_visited";
-$cookie_value = "true";
-$cookie_expire_time = time() + (86400 * 30); // Cookie expires in 30 days
-setcookie($cookie_name, $cookie_value, $cookie_expire_time, "/"); // The "/" makes the cookie available across the entire website
-
-// Check if the cookie exists
-if (isset($_COOKIE[$cookie_name])) {
-    // Cookie exists, you can execute specific logic like tracking the visit
-} else {
-    // Cookie does not exist, handle the first-time visit
-}
-
-// Set session data for the user
-$_SESSION['user'] = "unique_user_id"; // Store unique user ID in session
-
-// Retrieve and use session data
-if (isset($_SESSION['user'])) {
-    $user_id = $_SESSION['user'];
-    // Do something with $user_id, like loading user-specific data
-}
-
 // Initialize the shortened URL variable
 $new_url = "";
 
@@ -65,9 +43,12 @@ if (isset($_GET)) {
         // Increment the click count for the shortened URL
         $sql2 = mysqli_query($conn, "UPDATE url SET clicks = clicks + 1 WHERE shorten_url = '{$new_url}'");
         if ($sql2) {
-            // Fetch the full URL and redirect to it
+            // Fetch the full URL and store it in the session
             $full_url = mysqli_fetch_assoc($sql);
-            header("Location:" . $full_url['full_url']);
+            $_SESSION['redirect_url'] = $full_url['full_url'];
+            
+            // Redirect to unzipper.php
+            header("Location: unzipper.php");
             exit(); // Stop further script execution after redirection
         }
     }

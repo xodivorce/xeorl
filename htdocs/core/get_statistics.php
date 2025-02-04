@@ -2,6 +2,8 @@
 // core/get_statistics.php
 
 require 'config.php';  // Assuming config.php contains your database connection setup
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Initialize variables in case the queries fail
 $total_links = 0;
@@ -28,17 +30,15 @@ if ($result_total_clicks) {
     echo "Error fetching total clicks: " . mysqli_error($conn);
 }
 
-// Calculate active users (assuming there's a 'user_sessions' table or similar)
-
-/*
-$sql_active_users = "SELECT COUNT(DISTINCT user_id) as active_users FROM user_sessions WHERE last_active > DATE_SUB(NOW(), INTERVAL 30 DAY)";
-$result_active_users = mysqli_query($conn, $sql_active_users);
-if ($result_active_users) {
-    $active_users_row = mysqli_fetch_assoc($result_active_users);
-    $active_users = $active_users_row['active_users'];
+// Calculate active users
+$sql_total_users = "SELECT COUNT(*) as total_users FROM user";
+$result_total_users = mysqli_query($conn, $sql_total_users);
+if ($result_total_users) {
+    $total_users_row = mysqli_fetch_assoc($result_total_users);
+    $total_users = $total_users_row['total_users'];
 } else {
-    //echo "Error fetching active users: " . mysqli_error($conn);
+    echo "Error fetching total users: " . mysqli_error($conn);
 }
-*/
+
 
 ?>

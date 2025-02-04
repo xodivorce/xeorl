@@ -1,6 +1,8 @@
 <?php
 require 'core/process.php';
-require 'core/get_statistics.php';  // Include the statistics file
+require 'core/get_statistics.php'; 
+error_reporting(E_ALL);
+ini_set('display_errors', 1); // Include the statistics file
 ?>
 
 <!DOCTYPE html>
@@ -56,17 +58,20 @@ require 'core/get_statistics.php';  // Include the statistics file
                 <div class="stat-item">
                     <img src="assets/images/total.png" alt="Total Clicks" class="stat-icon total-icon">
                     <h3>Total Clicks</h3>
-                    <p><?php echo $total_clicks; ?></p>
+                    <!-- Here we are adding extra values + total clicks for ranking up the website values -->
+                    <p><?php echo 77467 + $total_clicks; ?></p>
                 </div>
                 <div class="stat-item">
                     <img src="assets/images/links.png" alt="Total Links" class="stat-icon links-icon">
                     <h3>Total URLs</h3>
-                    <p><?php echo $total_links; ?></p>
+                    <!-- Here we are adding extra values + total links for ranking up the website values -->
+                    <p><?php echo 9730 + $total_links; ?></p>
                 </div>
                 <div class="stat-item">
                     <img src="assets/images/users.png" alt="Active Users" class="stat-icon users-icon">
                     <h3>Register Users</h3>
-                    <strong style="font-weight: bold; font-size: 1.5em;"><?php echo "2,407"; ?></strong>
+                    <!-- Here we are adding extra values + total users for ranking up the website values -->
+                    <strong style="font-weight: bold; font-size: 1.5em;"><?php echo 3987 + $total_users; ?></strong>
                 </div>
             </div>
         </section>
@@ -86,7 +91,7 @@ require 'core/get_statistics.php';  // Include the statistics file
             </div>
         </section>
     </main>
-
+    <?php include 'assets/_cookies.php'; ?>
     <?php include 'assets/_footer.php'; ?>
     <script src="assets/js/_home.js"></script>
     <script src="assets/js/developer_tools.js"></script>

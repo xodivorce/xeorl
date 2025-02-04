@@ -1,5 +1,7 @@
 <?php
 session_start(); // Start the session
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // Retrieve the email from the session
 ?>
 

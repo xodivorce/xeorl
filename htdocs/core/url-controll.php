@@ -1,6 +1,8 @@
 <?php
 session_start();
 include "config.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 $full_url = mysqli_real_escape_string($conn, $_POST['full_url']);
 
 if (!empty($full_url) && filter_var($full_url, FILTER_VALIDATE_URL)) {
