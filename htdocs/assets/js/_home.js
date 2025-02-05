@@ -34,7 +34,7 @@ shortenBtn.onclick = () => {
             let data = xhr.response;
             if (data.length <= 5) {
                 // This is your shoeten domain name
-                const domain = "http://localhost/Php-Projects/xeorl/htdocs//";
+                const domain = "xeorl.buzz/";
                 let shortenURL = domain + data;
 
                 const defaultMessage = document.getElementById("default-message");

@@ -55,7 +55,7 @@ ini_set('display_errors', 1);
                     <?php endif; ?>
                     <div class="checkbox-container">
                         <input type="checkbox" id="agree" class="custom-checkbox" name="user_agree" value="1">
-                        <label for="agree">I agree to the <a href="#" class="terms-link">Terms & Conditions</a></label>
+                        <label for="agree">I agree to the <a href="https://docs.google.com/document/d/1QcUohit6U3ZmWyOZbggbpUr2KrQ6pwy3X-R4zUGfZBo/edit?usp=sharing" class="terms-link">Terms & Conditions</a></label>
                     </div>
                     <?php if (isset($_SESSION['error'])): ?>
                         <div id="error-message" style="color: red; font-size: 14px; margin-top: 5px;">
