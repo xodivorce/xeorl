@@ -1,8 +1,9 @@
 <?php
 require 'core/process.php';
-require 'core/get_statistics.php'; 
+require 'core/get_statistics.php';
+
 error_reporting(E_ALL);
-ini_set('display_errors', 1); // Include the statistics file
+ini_set('display_errors', 1);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ ini_set('display_errors', 1); // Include the statistics file
     <link rel="stylesheet" href="assets/css/_home.css">
 </head>
 <body>
-<?php include "assets/_header.php"; ?>
+    <?php include "assets/_header.php"; ?>
     
     <main>
         <!-- Shorten Section -->
@@ -38,8 +39,7 @@ ini_set('display_errors', 1); // Include the statistics file
             </div>
             <div class="shortened-links">
                 <h2>Your shortened links :</h2>
-                <ul id="links-list">
-                </ul>
+                <ul id="links-list"></ul>
             </div>
         </section>
 
@@ -58,19 +58,16 @@ ini_set('display_errors', 1); // Include the statistics file
                 <div class="stat-item">
                     <img src="assets/images/total.png" alt="Total Clicks" class="stat-icon total-icon">
                     <h3>Total Clicks</h3>
-                    <!-- Here we are adding extra values + total clicks for ranking up the website values -->
                     <p><?php echo 77467 + $total_clicks; ?></p>
                 </div>
                 <div class="stat-item">
                     <img src="assets/images/links.png" alt="Total Links" class="stat-icon links-icon">
                     <h3>Total URLs</h3>
-                    <!-- Here we are adding extra values + total links for ranking up the website values -->
                     <p><?php echo 9730 + $total_links; ?></p>
                 </div>
                 <div class="stat-item">
                     <img src="assets/images/users.png" alt="Active Users" class="stat-icon users-icon">
                     <h3>Register Users</h3>
-                    <!-- Here we are adding extra values + total users for ranking up the website values -->
                     <strong style="font-weight: bold; font-size: 1.5em;"><?php echo 3987 + $total_users; ?></strong>
                 </div>
             </div>
@@ -91,8 +88,10 @@ ini_set('display_errors', 1); // Include the statistics file
             </div>
         </section>
     </main>
+
+    <?php include 'assets/_cookies.php'; ?>
     <?php include 'assets/_footer.php'; ?>
     <script src="assets/js/_home.js"></script>
-    <script src="assets/js/developer_tools.js"></script>
+    <script src="assets/js/_developer_tools.js"></script>
 </body>
 </html>

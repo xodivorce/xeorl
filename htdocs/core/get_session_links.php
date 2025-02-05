@@ -4,12 +4,10 @@ include "config.php";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Check if the session variable for storing shortened links exists
 if (!isset($_SESSION['shortened_links'])) {
     $_SESSION['shortened_links'] = array();
 }
 
-// Retrieve and return the list of shortened links for the current session
 $links = array();
 foreach ($_SESSION['shortened_links'] as $link_id) {
     $sql = mysqli_query($conn, "SELECT * FROM url WHERE id = '{$link_id}'");

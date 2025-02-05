@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const burgerToggle = document.getElementById("burger-toggle");
     const sidebar = document.querySelector(".sidebar");
 
-    // Ensure sidebar is hidden initially
     sidebar.style.display = "none";
 
     burgerToggle.addEventListener("click", function () {
@@ -17,12 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener('scroll', function () {
-    const header = document.querySelector('.header'); // Get the header element
+    const header = document.querySelector('.header');
   
-    // Check if the page has been scrolled
     if (window.scrollY > 0) {
-        header.classList.add('scrolled'); // Add the "scrolled" class
+        header.classList.add('scrolled');
     } else {
-        header.classList.remove('scrolled'); // Remove the "scrolled" class
+        header.classList.remove('scrolled');
     }
 });

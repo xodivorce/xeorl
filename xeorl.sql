@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2025 at 10:27 AM
+-- Generation Time: Feb 05, 2025 at 08:28 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,42 +33,23 @@ CREATE TABLE `url` (
   `full_url` varchar(1000) NOT NULL,
   `clicks` int(11) NOT NULL,
   `total_links` int(11) DEFAULT 0,
-  `total_clicks` int(11) DEFAULT 0
+  `total_clicks` int(11) DEFAULT 0,
+  `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `url`
 --
 
-INSERT INTO `url` (`id`, `shorten_url`, `full_url`, `clicks`, `total_links`, `total_clicks`) VALUES
-(68, 'b1f6c', 'https://chatgpt.com/', 0, 0, 0),
-(69, '11bd1', 'https://xeorl.buzz/', 0, 0, 0),
-(70, '6d802', 'https://xeorl.buzz/', 0, 0, 0),
-(71, 'ee620', 'https://xeorl.buzz/', 0, 0, 0),
-(72, '685ce', 'https://xeorl.buzz/', 0, 0, 0),
-(73, '9799d', 'https://xeorl.buzz/', 0, 0, 0),
-(74, '759d9', 'https://xeorl.buzz/', 0, 0, 0),
-(75, 'bb44e', 'https://xeorl.buzz/', 0, 0, 0),
-(76, 'f79c1', 'https://xeorl.buzz/', 0, 0, 0),
-(77, '8c834', 'https://xeorl.buzz/', 0, 0, 0),
-(78, 'db107', 'https://xeorl.buzz/', 0, 0, 0),
-(79, '925d9', 'https://xeorl.buzz/', 0, 0, 0),
-(80, 'e2a22', 'https://xeorl.buzz/', 0, 0, 0),
-(81, '4c9fe', 'https://xeorl.buzz/', 0, 0, 0),
-(82, 'bb5a1', 'https://xeorl.buzz/', 0, 0, 0),
-(83, '62809', 'https://xeorl.buzz/', 0, 0, 0),
-(84, '10676', 'https://xeorl.buzz/', 0, 0, 0),
-(85, 'f719f', 'https://xeorl.buzz/', 0, 0, 0),
-(86, 'a3cc2', 'https://xeorl.buzz/', 0, 0, 0),
-(87, '52fe9', 'https://prourl.eu.org/rwqe', 0, 0, 0),
-(88, 'd3b17', 'https://www.xodivorce.in/?i=1', 0, 0, 0),
-(89, '801d2', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
-(90, '8819b', 'http://localhost/Php-Projects/xeorl/htdocs/home.php', 0, 0, 0),
-(91, 'c8ff6', 'http://localhost/Php-Projects/xeorl/htdocs/home.php', 0, 0, 0),
-(92, '25418', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
-(93, 'ec04a', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
-(94, 'c1234', 'http://localhost/Php-Projects/xeorl/htdocs/', 0, 0, 0),
-(95, 'c6a56', 'https://www.xodivorce.in/?i=1', 0, 0, 0);
+INSERT INTO `url` (`id`, `shorten_url`, `full_url`, `clicks`, `total_links`, `total_clicks`, `user_id`) VALUES
+(68, 'b1f6c', 'https://chatgpt.com/', 0, 0, 0, NULL),
+(87, '52fe9', 'https://prourl.eu.org/rwqe', 0, 0, 0, NULL),
+(96, 'f49aa', 'https://www.xodivorce.in/', 6, 0, 0, NULL),
+(103, '67191', 'https://github.com/xodivorce', 0, 0, 0, NULL),
+(105, '4dfe6', 'https://www.blackbox.ai/', 0, 0, 0, NULL),
+(112, '9500b', 'https://www.google.com/search?q=int+11+max+value+%3F&sca_esv=b71b87a039ad9bf1&sxsrf=AHTn8zqi--a95yrKigfA0Sd6b_9ixbSRLQ%3A1738710375024&ei=Z52iZ9mfAcGtseMP0L-DkAQ&ved=0ahUKEwiZ75TykKuLAxXBVmwGHdDfAEIQ4dUDCBA&uact=5&oq=int+11+max+value+%3F&gs_lp=Egxnd3Mtd2l6LXNlcnAiEmludCAxMSBtYXggdmFsdWUgPzIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMgUQABjvBTIIEAAYgAQYogRIiwpQlgRY2ghwAXgBkAEAmAGvAaAB1AKqAQMwLjK4AQPIAQD4AQGYAgOgAuICwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHAzEuMqAH5Ak&sclient=gws-wiz-serp', 0, 0, 0, NULL),
+(116, '1dbcc', 'https://www.blackbox.ai/', 0, 0, 0, NULL),
+(117, '2f909', 'https://chatgpt.com/', 2, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -101,7 +82,8 @@ INSERT INTO `user` (`id`, `user_email`, `user_pass`, `user_otp`, `created_at`, `
 -- Indexes for table `url`
 --
 ALTER TABLE `url`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_user_id` (`user_id`);
 
 --
 -- Indexes for table `user`
@@ -118,13 +100,23 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `url`
+--
+ALTER TABLE `url`
+  ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
