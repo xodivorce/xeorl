@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="logo">
             <img src="assets/images/url.png" alt="Xeorl Logo" class="logo-img">
             <span>Xeorl</span>
-            <span class="version-number">4.2.4</span>
+            <span class="version-number">4.2.5</span>
         </div>
 
         <label class="burger">

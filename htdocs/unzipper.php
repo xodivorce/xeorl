@@ -27,6 +27,8 @@ $redirect_url = $_SESSION['redirect_url'];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/_unzipper.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5747712812070455"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <?php include "assets/_header.php"; ?>
