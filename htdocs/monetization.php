@@ -38,5 +38,6 @@ if (!isset($_SESSION['user_id'])) {
         <a href="logout.php">Logout</a>
     </main>
     <?php include "assets/_footer.php"; ?>
+    <script src="assets/js/_developer_tools.js"></script>
 </body>
 </html>

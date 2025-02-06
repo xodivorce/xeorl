@@ -88,6 +88,6 @@ ini_set('display_errors', 1);
     <?php include 'assets/_cookies.php'; ?>
     <?php include 'assets/_footer.php'; ?>
     <script src="assets/js/_home.js"></script>
-    <script src="assets/js/developer_tools.js"></script>
+    <script src="assets/js/_developer_tools.js"></script>
 </body>
 </html>

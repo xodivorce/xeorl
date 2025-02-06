@@ -77,5 +77,6 @@ ini_set('display_errors', 1);
         </div>
     </div>
     <script src="assets/js/_login.js"></script>
+    <script src="assets/js/_developer_tools.js"></script>
 </body>
 </html>

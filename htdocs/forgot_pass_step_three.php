@@ -58,5 +58,6 @@ $success_message = $_SESSION['success_message'] ?? '';
     </div>
 </div>
 <script src="assets/js/_forgot_pass.js"></script>
+<script src="assets/js/_developer_tools.js"></script>
 </body>
 </html>

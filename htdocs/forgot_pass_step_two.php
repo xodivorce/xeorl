@@ -70,6 +70,7 @@ $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
         document.getElementById('userEmail').textContent = "<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>";
     </script>
     <script src="assets/js/_forgot_pass.js"></script>
+    <script src="assets/js/_developer_tools.js"></script>
 </body>
 
 </html>
