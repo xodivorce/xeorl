@@ -15,9 +15,9 @@
         </script>
         </p>
         <div class="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
+            <a href="https://docs.google.com/document/d/1sZ2TwjST8nKaRl-rSteAd2XHlVZdDhgS6jHRKwjDedc/edit?usp=sharing">Privacy</a>
+            <a href="https://docs.google.com/document/d/1QcUohit6U3ZmWyOZbggbpUr2KrQ6pwy3X-R4zUGfZBo/edit?usp=sharing">Terms</a>
+            <a href="home.php">Contact</a>
             <a href="https://github.com/xodivorce/xeorl" target="_blank" >Github</a>
         </div>
     </div> 

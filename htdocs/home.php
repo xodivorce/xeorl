@@ -1,6 +1,6 @@
 <?php
 require 'core/process.php';
-require 'core/get_statistics.php';
+require 'core/get_statistics.php'; 
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -13,6 +13,7 @@ ini_set('display_errors', 1);
     <title>Xeorl - Link Shortener and Management Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Xeorl - The All-In-One, Fully Free to Use Advanced Link Shortener and Management Tool - Equipped with Multi-layered URL encryption, URL metadata remover, Mass shrinker, Quick link and Many more! - Powered by @xodivorce...">
+    <meta name="google-adsense-account" content="ca-pub-5747712812070455">
     <link rel="icon" type="image/png" href="./assets/images/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" />
@@ -23,12 +24,12 @@ ini_set('display_errors', 1);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/_home.css">
+       <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5747712812070455" crossorigin="anonymous"></script>
 </head>
 <body>
     <?php include "assets/_header.php"; ?>
-    
     <main>
-        <!-- Shorten Section -->
         <section class="shorten-section" style="user-select: none;">
             <h1>Open source inits.</h1>
             <h2>Lovingly hand-crafted.</h2>
@@ -42,8 +43,6 @@ ini_set('display_errors', 1);
                 <ul id="links-list"></ul>
             </div>
         </section>
-
-        <!-- Dashboard Statistics Section -->
         <section class="dashboard-stats-section" style="user-select: none;">
             <h1 class="section-heading">Numbers Speak For Themselves.</h1>
             <h2 class="section-subheading">Challenged By URLs, Defeated By None.</h2>
@@ -53,7 +52,6 @@ ini_set('display_errors', 1);
                 to support and resolve any issues you have because your satisfaction
                 means everything to us. For any issues, email us at <a href="mailto:hey@xodivorce.in" class="contact-link">hey@xodivorce.in</a>.
             </p>
-
             <div class="dashboard-stats">
                 <div class="stat-item">
                     <img src="assets/images/total.png" alt="Total Clicks" class="stat-icon total-icon">
@@ -72,8 +70,6 @@ ini_set('display_errors', 1);
                 </div>
             </div>
         </section>
-
-        <!-- How to Start Section -->
         <section class="how-to-start-section" style="user-select: none;">
             <h1 class="section-heading">Just Three Simple Steps</h1>
             <h2 class="section-subheading">How to Get Started?</h2>
@@ -88,10 +84,9 @@ ini_set('display_errors', 1);
             </div>
         </section>
     </main>
-
     <?php include 'assets/_cookies.php'; ?>
     <?php include 'assets/_footer.php'; ?>
     <script src="assets/js/_home.js"></script>
-    <script src="assets/js/_developer_tools.js"></script>
+    <script src="assets/js/developer_tools.js"></script>
 </body>
 </html>

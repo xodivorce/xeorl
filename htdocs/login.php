@@ -8,6 +8,7 @@ ini_set('display_errors', 1);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/images/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
@@ -18,8 +19,9 @@ ini_set('display_errors', 1);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <title>Login</title>
     <link rel="stylesheet" href="assets/css/_login.css">
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5747712812070455" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container" style="user-select: none;">
