@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 :root {
     /* Color Variables */
     --background-color: #c1c2c4;
@@ -360,6 +365,15 @@ body {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s, border-color 0.3s;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #171C24;
+    border-radius: 0;
 }
 
 @media (max-width: 990px) {

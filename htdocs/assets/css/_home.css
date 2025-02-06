@@ -4,6 +4,8 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333333;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 main {
@@ -347,6 +349,15 @@ main {
     color: #3C4B62;
     margin: 0.5rem 0 1rem; /* Adjust spacing between text blocks */
     padding-left: 1.5rem; /* Add indentation to the descriptions */
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #171C24;
+    border-radius: 0;
 }
 
 /* For screens 768px and below */

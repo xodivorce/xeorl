@@ -4,9 +4,20 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333333;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 main {
     padding: 60px 20px;
     text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #171C24;
+    border-radius: 0;
 }

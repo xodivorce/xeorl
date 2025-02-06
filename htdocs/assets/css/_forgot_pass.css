@@ -369,6 +369,20 @@ body {
     margin-top: 10px;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #171C24;
+    border-radius: 0;
+}
+
+body {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 @media (max-width: 990px) {
     /* Adjust text sizes */
     body {

@@ -3,6 +3,8 @@ body {
   background: #ffffff;
   margin: 0;
   padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .max-container {
@@ -81,6 +83,15 @@ button {
 button:active {
   box-shadow: rgba(68, 68, 68, 0.572) 3px 2px 10px 0px;
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #171C24;
+  border-radius: 0;
 }
 
 @media (max-width: 1170px) {
