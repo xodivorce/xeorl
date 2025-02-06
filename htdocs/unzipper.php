@@ -1,14 +1,14 @@
 <?php
-// if (session_status() === PHP_SESSION_NONE) {
-//     session_start();
-// }
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// if (!isset($_SESSION['redirect_url'])) {
-//     http_response_code(400);
-//     die("Invalid request! The page you are looking for may have been deleted or removed from our server.");
-// }
+if (!isset($_SESSION['redirect_url'])) {
+    http_response_code(400);
+    die("Invalid request! The page you are looking for may have been deleted or removed from our server.");
+}
 
-// $redirect_url = $_SESSION['redirect_url'];
+$redirect_url = $_SESSION['redirect_url'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
