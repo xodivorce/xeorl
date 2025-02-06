@@ -1,12 +1,12 @@
-let countdown = 10;
+let countdown = 13.5;
 let countdownInterval;
 const timerElement = document.getElementById("timer");
 const button = document.getElementById("getLinkBtn");
 
 function updateCountdown() {
     if (countdown > 0) {
-        countdown--;
-        timerElement.textContent = countdown;
+        countdown -= 0.5;
+        timerElement.textContent = countdown.toFixed(1);
     }
     if (countdown <= 0) {
         button.disabled = false;
@@ -23,7 +23,7 @@ function updateCountdown() {
 }
 
 function startCountdown() {
-    countdownInterval = setInterval(updateCountdown, 1000);
+    countdownInterval = setInterval(updateCountdown, 500);
 }
 
 function stopCountdown() {
@@ -31,8 +31,8 @@ function stopCountdown() {
 }
 
 function init() {
-    countdown = 10;
-    timerElement.textContent = countdown;
+    countdown = 13.5;
+    timerElement.textContent = countdown.toFixed(1);
     button.disabled = true;
     button.classList.remove("active");
     button.style.cursor = "not-allowed";

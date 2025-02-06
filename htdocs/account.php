@@ -30,6 +30,7 @@ if (!isset($_SESSION['user_id'])) {
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5747712812070455" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php include "assets/_preloader.php" ?>
     <?php include "assets/_header.php"; ?>
     <main>
         <h2>Welcome, <?php echo $_SESSION['user_name']; ?>!</h2>

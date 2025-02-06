@@ -24,6 +24,7 @@ ini_set('display_errors', 1);
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5747712812070455" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php include "assets/_preloader.php" ?>
     <div class="container" style="user-select: none;">
         <div class="left-section">
             <div class="header">

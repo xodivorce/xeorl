@@ -1,14 +1,14 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+// if (session_status() === PHP_SESSION_NONE) {
+//     session_start();
+// }
 
-if (!isset($_SESSION['redirect_url'])) {
-    http_response_code(400);
-    die("Invalid request! The page you are looking for may have been deleted or removed from our server.");
-}
+// if (!isset($_SESSION['redirect_url'])) {
+//     http_response_code(400);
+//     die("Invalid request! The page you are looking for may have been deleted or removed from our server.");
+// }
 
-$redirect_url = $_SESSION['redirect_url'];
+// $redirect_url = $_SESSION['redirect_url'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,13 +31,14 @@ $redirect_url = $_SESSION['redirect_url'];
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5747712812070455" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php include "assets/_preloader.php" ?>
     <?php include "assets/_header.php"; ?>
     <div class="max-container">
         <div class="container">
             <h2>Your link is almost ready.</h2>
             <div class="countdown-wrapper">
                 <div class="countdown">
-                    <span id="timer">10</span><br>Seconds
+                    <span id="timer">13</span><br>Seconds
                 </div>
             </div>
             <button id="getLinkBtn" disabled onclick="redirect()">PLEASE WAIT...</button>
